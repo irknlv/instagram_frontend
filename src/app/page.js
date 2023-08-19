@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import Test from '../components/test'
+import Login from '@/app/login/page'
+import Registration from '@/components/auth/registration'
+import Footer from '@/components/footer'
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Test></Test>
+    <main className="wrapper">
+      <Registration></Registration>
+      <Footer></Footer>
     </main>
   )
 }

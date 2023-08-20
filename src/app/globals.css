@@ -1,3 +1,6 @@
 @import url('./style/base.css');
 @import url('./style/components/auth.css');
 @import url('./style/components/footer.css');
+@import url('./style/components/headerProfile.css');
+@import url('./style/components/userProfile.css');
+@import url('./style/components/post.css');

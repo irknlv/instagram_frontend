@@ -52,3 +52,8 @@
     justify-content: right;
     align-items: center;
 }
+.header-profile-menu button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

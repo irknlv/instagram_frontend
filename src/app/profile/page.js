@@ -1,5 +1,6 @@
 import HeaderProfile from "@/components/headerProfile";
 import UserProfile from "@/components/userProfile";
+import NewPost from "@/components/newPost";
 
 export default function ProfilePage(){
   return (

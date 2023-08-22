@@ -91,10 +91,16 @@ export default function NewPost({isModalOpen,closeModal}){
         }
     }
     const closeModalWindow = () => {
-        closeModal();
-        setSelectedFilter(null);
-        setCurrentStep(1);
-        setCaption("")
+        const confirmed = window.confirm("Вы уверены, что хотите продолжить?");
+        if (confirmed) {
+            closeModal();
+            setSelectedFilter(null);
+            setCurrentStep(1);
+            setCaption("")
+        } else {
+            
+        }
+        
     }
     return (
         <section>

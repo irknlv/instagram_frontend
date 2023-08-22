@@ -96,7 +96,7 @@
 .editPost-container-left{
     height: 100%;
     width: 65%;
-    background-color: gray;
+    background-color: #f8f8f8;
     display: flex;
 }
 .editPost-container-left>img{

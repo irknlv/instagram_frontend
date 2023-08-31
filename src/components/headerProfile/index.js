@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import NewPost from "@/components/newPost";
-
+import { ReactSVG } from 'react-svg';
 export default function HeaderProfile(){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {

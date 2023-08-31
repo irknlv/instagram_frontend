@@ -107,7 +107,7 @@ export default function NewPost({isModalOpen,closeModal}){
             {isModalOpen && <div className="newPost">
                     <button 
                         onClick={closeModalWindow}
-                        className="newPost-closeButton"
+                        className="modalWindow-closeButton"
                     >
                         &times;
                     </button>

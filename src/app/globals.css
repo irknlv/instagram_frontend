@@ -5,3 +5,5 @@
 @import url('./style/components/userProfile.css');
 @import url('./style/components/post.css');
 @import url('./style/components/newPost.css');
+@import url('./style/components/postAbout.css');
+@import url('./style/components/comment.css');

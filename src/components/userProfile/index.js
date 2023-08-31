@@ -1,5 +1,6 @@
+'use client'
 import Posts from "../posts";
-
+import React, {useState} from "react";
 export default function UserProfile(){
     const posts = [
         {
@@ -32,8 +33,86 @@ export default function UserProfile(){
             img: 'post6.png',
             type: 'multiple'
         },
-        
     ]
+    const [comments, setComments] = useState([
+        {
+            id: 1,
+            content: 'Клевый пост',
+            username: 'irkenaliyev1',
+            postId: 1,
+            likes: 5,
+        },
+        {
+            id: 2,
+            content: 'Хороший пост',
+            username: 'irkenaliyev2',
+            postId: 1,
+            likes: 3,
+        },
+        {
+            id: 3,
+            content: 'Класс',
+            username: 'irkenaliyev3',
+            postId: 1,
+            likes: 4,
+        },
+        {
+            id: 4,
+            content: 'Круто',
+            username: 'irkenaliyev4',
+            postId: 1,
+            likes: 7,
+        },
+        {
+            id: 5,
+            content: 'Огонь',
+            username: 'irkenaliyev5',
+            postId: 1,
+            likes: 9,
+        },
+        {
+            id: 6,
+            content: 'Красиво',
+            username: 'irkenaliyev6',
+            postId: 1,
+            likes: 3,
+        },
+        {
+            id: 7,
+            content: 'Вау',
+            username: 'irkenaliyev7',
+            postId: 1,
+            likes: 2,
+        },
+        {
+            id: 8,
+            content: 'Красиво',
+            username: 'irkenaliyev8',
+            postId: 1,
+            likes: 7,
+        },
+        {
+            id: 9,
+            content: 'Классное фото',
+            username: 'irkenaliyev9',
+            postId: 1,
+            likes: 11,
+        },
+        {
+            id: 10,
+            content: 'Хороший фотограф',
+            username: 'irkenaliyev10',
+            postId: 1,
+            likes: 13,
+        },
+        {
+            id: 11,
+            content: 'Клевая фотка',
+            username: 'irkenaliyev11',
+            postId: 1,
+            likes: 16,
+        },        
+    ])
     return(
        <section>
             <div className="user-profile">
@@ -54,7 +133,7 @@ export default function UserProfile(){
                     </div>
                 </div>
             </div>
-            <Posts posts={posts}></Posts>
+            <Posts posts={posts} comments={comments}></Posts>
        </section>
     )
 }

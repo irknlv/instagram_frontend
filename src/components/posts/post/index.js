@@ -1,4 +1,4 @@
-export default function Post({post}){
+export default function Post({post, onClick}){
     const postImg = "/images/" + post.img;
     let iconSrc = "";
     if (post.type === 'multiple') {
@@ -7,7 +7,7 @@ export default function Post({post}){
         iconSrc = "/images/icons/videoTypeIcon.svg";
     }
     return(
-        <div className="profile-post">
+        <div className="profile-post" onClick={onClick}>
             <div className="profile-post-image">
                 <img src={postImg} alt="" />
             </div>

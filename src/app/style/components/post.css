@@ -29,6 +29,7 @@
 }
 .profile-post{
     position: relative;
+    cursor: pointer;
 }
 .profile-post-image{
     width: 293px;

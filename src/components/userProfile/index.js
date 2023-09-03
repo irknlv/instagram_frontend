@@ -1,6 +1,8 @@
 'use client'
+import Followers from "../followers";
 import Posts from "../posts";
 import React, {useState} from "react";
+
 export default function UserProfile(){
     const posts = [
         {
@@ -113,6 +115,13 @@ export default function UserProfile(){
             likes: 16,
         },        
     ])
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => {
+        setIsModalOpen(true);
+    }
+    const closeModal = () => {
+        setIsModalOpen(false);
+    }
     return(
        <section>
             <div className="user-profile">
@@ -125,7 +134,7 @@ export default function UserProfile(){
                     </div>
                     <div className="user-profile-info">
                         <small><span>1,258</span> posts</small>
-                        <small><span>4M</span> followers</small>
+                        <button onClick={openModal}><small><span>4M</span> followers</small></button>
                         <small><span>1,250</span> following</small>
                     </div>
                     <div className="user-profile-biography">
@@ -134,6 +143,7 @@ export default function UserProfile(){
                 </div>
             </div>
             <Posts posts={posts} comments={comments}></Posts>
+            {isModalOpen && <Followers closeModal={closeModal}></Followers>}
        </section>
     )
 }

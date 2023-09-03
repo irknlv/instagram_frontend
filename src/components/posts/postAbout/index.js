@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Comment from "@/components/posts/comment"
+import Comment from "@/components/comment"
 export default function PostAbout({selectedPost, filterComments, setFilterComments, closeModal, setComments}){
     const imgUrl = '/images/' + selectedPost.img;
     const showComments = filterComments.map(com => (

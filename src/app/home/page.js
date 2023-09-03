@@ -1,8 +1,7 @@
 import HeaderProfile from "@/components/headerProfile";
-import UserProfile from "@/components/userProfile";
-import NewPost from "@/components/newPost";
 import Footer from "@/components/footer"
-export default function ProfilePage(){
+import SocialMedia from "@/components/socialMedia";
+export default function Home(){
   return (
     <main>
       <div className="border-header">
@@ -11,7 +10,7 @@ export default function ProfilePage(){
         </div>
       </div>
       <div className="wrapper-page">
-        <UserProfile></UserProfile>
+        <SocialMedia></SocialMedia>
       </div>
       <Footer></Footer>
     </main>

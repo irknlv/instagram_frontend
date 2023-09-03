@@ -19,7 +19,9 @@ export default function HeaderProfile(){
         <section>
             <div className="header-profile">
                 <div className="header-profile-logo">
-                    <img src="/images/logo.svg" alt="" />
+                    <a href="/home">
+                        <img src="/images/logo.svg" alt="" />
+                    </a>
                 </div>
                 <div className="header-profile-search">
                     <input 
@@ -47,7 +49,7 @@ export default function HeaderProfile(){
                     <a href="">
                         <img src="/images/icons/like.svg" alt="" />
                     </a>
-                    <a href="">
+                    <a href="/profile">
                         <img src="/images/icons/profilePicture.svg" alt="" />
                     </a>
                 </div>

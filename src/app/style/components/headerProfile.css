@@ -5,7 +5,7 @@
     padding: 10px 0;
     position: relative;
 }
-.border-profile{
+.border-header{
     border-bottom: 1px solid #DBDBDB;
 }
 .header-profile-logo, .header-profile-search, .header-profile-menu{
@@ -15,7 +15,11 @@
     display: flex;
     align-items: center;
 }
-.header-profile-logo>img{
+.header-profile-logo a{
+    display: flex;
+    align-items: center;
+}
+.header-profile-logo img{
     width: 103px;
 }
 .header-profile-search{

@@ -2,17 +2,18 @@
 
 import React, { useState } from "react"
 
-export default function StoryModal({stories, closeModal, isPrevStory, isActiveStory, isNextStory, storyToLeft, storyToRight, scrollStoryPosition, scrollStoryPositionModal, setScrollStoryPosition, setScrollStoryPositionModal}){
+export default function StoryModal({stories, closeModal, isPrevStory, isActiveStory, isNextStory, isPrev2Story, isNext2Story ,storyToLeft, storyToRight, scrollStoryPosition, scrollStoryPositionModal, setScrollStoryPosition, setScrollStoryPositionModal}){
     const showStories = stories.map((story, index)=>{
         return(
             <React.Fragment key={index}>
                 <div
-                    style={{display: `none`, 
-                }} 
+                    style={{display: `none`}}
                     className={
-                        `storyModal-window 
+                        `storyModal-window
                         ${isActiveStory==story.id ? 'isActiveStory' : ''}
                         ${isPrevStory==story.id ? 'isPrevStory' : ''}
+                        ${isPrev2Story==story.id ? 'isPrevStory' : ''}
+                        ${isNext2Story==story.id ? 'isNextStory' : ''}
                         ${isNextStory==story.id ? 'isNextStory' : ''}
                     }`}
                 >
@@ -21,6 +22,8 @@ export default function StoryModal({stories, closeModal, isPrevStory, isActiveSt
                         className={`
                         ${isPrevStory==story.id ? 'isDark' : ''}
                         ${isNextStory==story.id ? 'isDark' : ''}
+                        ${isPrev2Story==story.id ? 'isDark' : ''}
+                        ${isNext2Story==story.id ? 'isDark' : ''}
                     `}></div>
                 </div>
             </React.Fragment>

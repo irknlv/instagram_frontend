@@ -23,6 +23,8 @@ export default function StoriesFeed({stories}){
     const [isActiveStory, setIsActiveStory] = useState(null);
     const [isPrevStory, setIsPrevStory] = useState(null);
     const [isNextStory, setIsNextStory] = useState(null);
+    const [isPrev2Story, setIsPrev2Story] = useState(null);
+    const [isNext2Story, setIsNext2Story] = useState(null);
     const [scrollStoryPosition, setScrollStoryPosition] = useState(0);
     const [scrollStoryPositionModal, setScrollStoryPositionModal] = useState(0);
     
@@ -35,10 +37,22 @@ export default function StoriesFeed({stories}){
             setIsPrevStory(null);
         }
 
+        if((id-2)>0){
+            setIsPrev2Story(id-2);
+        } else{
+            setIsPrev2Story(null);
+        }
+
         if((id+1)<(stories.length+1)){
             setIsNextStory(id+1);
         } else {
             setIsNextStory(null);
+        }
+
+        if((id+2)<(stories.length+1)){
+            setIsNext2Story(id+2);
+        } else {
+            setIsNext2Story(null);
         }
     }
     const openModal = (id) => {
@@ -49,14 +63,14 @@ export default function StoriesFeed({stories}){
     const storyToLeft = () => {
         if (isActiveStory !== null && isActiveStory > 1) {
             setStory(isActiveStory - 1);
-            setScrollStoryPositionModal((prevPosition) => prevPosition - 400);
+            setScrollStoryPositionModal((prevPosition) => prevPosition - 50);
         }
     }
     
     const storyToRight = () => {
         if (isActiveStory !== null && isActiveStory < stories.length) {
             setStory(isActiveStory + 1);
-            setScrollStoryPositionModal((prevPosition) => prevPosition + 400);
+            setScrollStoryPositionModal((prevPosition) => prevPosition + 50);
         }
     }
 
@@ -92,7 +106,7 @@ export default function StoriesFeed({stories}){
                 <img src="/images/icons/buttonArrow.svg" alt="" />
             </button>
         </div>
-        {isModalOpen && <StoryModal stories={stories} closeModal={closeModal} isPrevStory={isPrevStory} isActiveStory={isActiveStory} isNextStory={isNextStory} storyToLeft={storyToLeft} storyToRight={storyToRight} scrollStoryPosition={scrollStoryPosition} scrollStoryPositionModal={scrollStoryPositionModal} setScrollStoryPosition={setScrollStoryPosition} setScrollStoryPositionModal={setScrollStoryPositionModal}></StoryModal>}
+        {isModalOpen && <StoryModal stories={stories} closeModal={closeModal} isPrevStory={isPrevStory} isActiveStory={isActiveStory} isNextStory={isNextStory} isPrev2Story={isPrev2Story} isNext2Story={isNext2Story} storyToLeft={storyToLeft} storyToRight={storyToRight} scrollStoryPosition={scrollStoryPosition} scrollStoryPositionModal={scrollStoryPositionModal} setScrollStoryPosition={setScrollStoryPosition} setScrollStoryPositionModal={setScrollStoryPositionModal}></StoryModal>}
     </section>
     )
 }

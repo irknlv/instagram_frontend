@@ -1,6 +1,8 @@
+'use client'
 import HeaderProfile from "@/components/headerProfile";
 import Footer from "@/components/footer"
 import SocialMedia from "@/components/socialMedia";
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 export default function Home(){
   return (
     <main>

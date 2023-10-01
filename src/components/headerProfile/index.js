@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import NewPost from "@/components/newPost";
 import { ReactSVG } from 'react-svg';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 export default function HeaderProfile(){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {
@@ -16,12 +17,13 @@ export default function HeaderProfile(){
     setInputValue(value);
   };
     return (
+        <Router>
         <section>
             <div className="header-profile">
                 <div className="header-profile-logo">
-                    <a href="/home">
+                    <Link to="/home">
                         <img src="/images/logo.svg" alt="" />
-                    </a>
+                    </Link>
                 </div>
                 <div className="header-profile-search">
                     <input 
@@ -56,5 +58,6 @@ export default function HeaderProfile(){
             </div>
             <NewPost isModalOpen={isModalOpen} closeModal={closeModal}></NewPost>
         </section>
+        </Router>
     )
 }
